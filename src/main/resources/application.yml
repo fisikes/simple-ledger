@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:C:/data/sample;IFEXISTS=TRUE
+    username: root
+    password: root
+
+server:
+  port: 8081
