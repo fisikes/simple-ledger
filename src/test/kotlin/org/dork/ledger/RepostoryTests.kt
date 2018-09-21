@@ -14,16 +14,16 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 class RepositoryTests(@Autowired val entityManager: TestEntityManager,
                       @Autowired val simpleRepository: GoodsRepository) {
 
-    @Test
-    fun `save one`() {
-        val goods = Goods("土豆粉", 12.1)
-        //entityManager.persist(goods)
-        simpleRepository.save(goods)
-    }
-
-    @Test
-    fun `get all`() {
-        val result = simpleRepository.findAll()
-        println(result)
-    }
+//    @Test
+//    fun `save one`() {
+//        val goods = Goods("土豆粉", 12.1)
+//        //entityManager.persist(goods)
+//        simpleRepository.save(goods)
+//    }
+//
+//    @Test
+//    fun `get all`() {
+//        val result = simpleRepository.findAll()
+//        println(result)
+//    }
 }
