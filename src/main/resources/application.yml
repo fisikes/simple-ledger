@@ -1,8 +1,17 @@
 spring:
   datasource:
-    url: jdbc:h2:file:C:/data/sample;IFEXISTS=TRUE
+    url: jdbc:h2:file:C:/data/sample
     username: root
     password: root
+
+  h2:
+    console:
+      enabled: true
+      path: /h2 # h2数据库的访问页面
+  jpa:
+    hibernate:
+      ddl-auto: update # Defaults to "create-drop"
+
 
 server:
   port: 8081

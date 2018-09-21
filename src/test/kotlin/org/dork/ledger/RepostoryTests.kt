@@ -12,18 +12,18 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 @ExtendWith(SpringExtension::class)
 @DataJpaTest
 class RepositoryTests(@Autowired val entityManager: TestEntityManager,
-                      @Autowired val goodsRepository: GoodsRepository) {
+                      @Autowired val simpleRepository: GoodsRepository) {
 
     @Test
     fun `save one`() {
         val goods = Goods("土豆粉", 12.1)
         //entityManager.persist(goods)
-        goodsRepository.save(goods)
+        simpleRepository.save(goods)
     }
 
     @Test
     fun `get all`() {
-        val result = goodsRepository.findAll()
+        val result = simpleRepository.findAll()
         println(result)
     }
 }
